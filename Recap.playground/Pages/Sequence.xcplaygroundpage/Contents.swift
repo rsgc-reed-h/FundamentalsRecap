@@ -27,6 +27,27 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 400)
 
+var points : [NSPoint] = [] // create empty list (array) of type NSPoint
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+canvas.fillColor = Color(hue: 80, saturation: 80, brightness: 80, alpha: 80)
+points.append(NSPoint(x: 400, y: 300) )
+    points.append(NSPoint(x: 300, y: 300) )
+    points.append(NSPoint(x: 350, y: 150) )
+canvas.drawCustomShape(with: points)
+
+
+canvas.fillColor = Color(hue: 30, saturation: 90, brightness: 100, alpha: 90)
+canvas.drawRoundedRectangle(centreX: 275, centreY: 225, width: 100, height: 100)
+
+
+canvas.fillColor = Color(hue: 240, saturation: 90, brightness: 100, alpha: 90)
+canvas.drawRectangle(centreX: 200, centreY: 225, width: 100, height: 250)
+
+canvas.fillColor = Color(hue: 0, saturation: 90, brightness: 100, alpha: 90)
+canvas.drawEllipse(centreX: 130, centreY: 175, width: 100, height: 100)
+
+
 // Replace this comment and add your code below 
 
 
