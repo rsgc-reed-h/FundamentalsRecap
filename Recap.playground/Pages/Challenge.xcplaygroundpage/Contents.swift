@@ -86,32 +86,81 @@ for y in stride(from: 0, through: 520, by: 270){
     
 ////    //black lines on bottom row
     for x in stride(from: 10, through: 540, by: 80) {
+    for y in stride(from: 42, to: 260, by: 130){
         canvas.lineColor = Color.black
-        canvas.drawLine(fromX: x, fromY: 88, toX: x, toY: 42, lineWidth: 10)
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
     }
     for x in stride(from: 70, through: 540, by: 80){
+    for y in stride(from: 42, to: 260, by: 130){
         canvas.lineColor = Color.black
-        canvas.drawLine(fromX: x, fromY: 88, toX: x, toY: 42, lineWidth: 10)
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
     }
 //    //orange line on bottom row
-    for z in stride(from: 88, to: 260, by: 130){
-    for y in stride(from: 42, through: 260, by: 130){
-        for x in stride(from: 20, through: 540, by: 40){
-            canvas.lineColor = Color.orange
-            canvas.drawLine(fromX: x, fromY: y, toX: x, toY: z, lineWidth: 10)
-        }
+    for y in stride(from: 42, to: 260, by: 130){
+    for x in stride(from: 20, through: 540, by: 40){
+        canvas.lineColor = Color.orange
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
     }
     }
 //////    //yellow lines on bottom row
+    for y in stride(from: 42, to: 260, by: 130){
     for x in stride(from: 30, through: 540, by: 80){
         canvas.lineColor = Color.yellow
-        canvas.drawLine(fromX: x, fromY: 88, toX: x, toY: 42, lineWidth: 10)
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
     }
    //yellow lines on the bottom
+    for y in stride(from: 42, to: 260, by: 130){
     for x in stride(from: 50, through: 540, by: 80){
         canvas.lineColor = Color.yellow
-        canvas.drawLine(fromX: x, fromY: 88, toX: x, toY: 42, lineWidth: 10)
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
     }
-}
+    }
 
+
+
+//black lines on top
+    for x in stride(from: 10, through: 540, by: 80) {
+    for y in stride(from: 312, to: 540, by: 130){
+        canvas.lineColor = Color.black
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
+    }
+
+    for x in stride(from: 70, through: 540, by: 80){
+    for y in stride(from: 312, to: 540, by: 130){
+        canvas.lineColor = Color.black
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
+    }
+
+//orange lines on top
+    for y in stride(from: 312, to: 540, by: 130){
+    for x in stride(from: 20, through: 540, by: 40){
+        canvas.lineColor = Color.orange
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
+    }
+
+//yellow lines on top
+    for y in stride(from: 312, to: 540, by: 130){
+    for x in stride(from: 50, through: 540, by: 80){
+            canvas.lineColor = Color.yellow
+            canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
+    }
+    
+    for y in stride(from: 312, to: 540, by: 130){
+    for x in stride(from: 30, through: 540, by: 80){
+            canvas.lineColor = Color.yellow
+            canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y + 46, lineWidth: 10)
+    }
+    }
+
+
+
+
+}
 PlaygroundPage.current.liveView = canvas.imageView
